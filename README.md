@@ -1,5 +1,6 @@
 # pipelined_matrix_multiplier
 Pipelined 4x4 signed 16-bit matrix multiplication core in VHDL <br>
+mat_mul_core_4x4.vhd <br>
 
 ---
 ## Algorithm
