@@ -9,8 +9,8 @@ Strassen’s algorithm, Winograd variation <br>
 
 ---
 ## Design
-Pipelined, designed for high throughput <br>
-Utilized Xilinx DSP multiplier IP cores for performance <br>
+Full-throughput pipelined, designed for high throughput <br>
+Utilized Xilinx DSP multiplier IP cores <br>
 Takes 2 256-bit std_logic_vectors inputs <br>
 <pre>
 DATA_WIDTH = 16:  [A B C D] => std_logic_vector AAAAAAAAAAAAAAAAB...B......O...OPPPPPPPPPPPPPPPP
@@ -18,12 +18,13 @@ DATA_WIDTH = 16:  [A B C D] => std_logic_vector AAAAAAAAAAAAAAAAB...B......O...O
                   [I J K L]                    255                   downto                    0
                   [M N O P]
 </pre>
-Output 1 512-bit std_logic_vector answer <br>
-AXI protocol READY and VALID signals <br>
+Output 1 512-bit std_logic_vector result <br>
+AXI-Stream protocol <br>
 
 ---
 ## Specifications
-Implementation maximum 416.667 MHz clock speed; 50ns latency. <br>
+Maximum frequency: 416.667 MHz. <br>
+Latency: 20 clock cycles. <br>
 Implementation utilization: 3889 LUTs, 15348 FFs, 49 DSPs. <br>
 
 ---
